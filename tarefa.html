@@ -1,0 +1,66 @@
+<!--(14//05) Tarefa do módulo 3-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+    <form>
+        <label for="name">Nome:</label>
+        <input id="name" type="name" placeholder="Digite aqui seu nome" required=“true”/>
+        <br />
+        <label for="email">E-mail:</label>
+        <input id="email" type="email"  placeholder="Digite aqui seu email" required=“true”/>
+        <br />
+        <label for="password">Senha:</label>
+        <input id="password" type="password" placeholder="Digite aqui sua senha" required=“true”/>
+        <br />
+        <label for="phone">Telefone:</label>
+        <input id="phone" type="tel" placeholder="Telefone para contato" required=“true”/>
+        <br />
+        <label for="file">Uma foto de perfil:</label>
+        <input id="file" type="file" required=“true”/>
+        <hr />
+        <label for="profissão">Sua profissão:</label>
+        <input id="profissão" type="text" placeholder="Digite aqui sua profissão" required=“true”/>
+        <br />
+        <label for="textareaprof">Nos conte o porquê escolheu essa profissão e o que mais gosta nela:</label>
+        <br />
+        <textarea id="textareaprof" placeholder="Escolhi minha profissão pois..." required=“true”></textarea>
+        <hr />
+        <label for="quest">Escolha uma pergunta para recuperar a senha</label>
+        <br />
+        <select id="quest">
+            <option>Qual o nome do seu primeiro animal de estimação?</option>
+            <option>Qual o nome do seu melhor amigo de infância?</option>
+            <option>Qual seu filme favorito?</option>
+            <option>Qual seu personagem favorito?</option>
+        </select>
+        <br />
+        <label for="text">R:</label>
+        <input id="text" type="text" placeholder="Resposta para a pergunta acima" required=“true”/>
+        <hr />
+        <label>Você concorda com nossos termos de uso?</label><br />
+        <a href="" title="Consultar nossos termos de uso">Termos de uso</a><br /><!--Não coloquei link pois é só um exemplo-->
+        <input id="agree" type="checkbox" required=“true” /><label for="agree">Eu concordo</label>
+        <hr />
+        <button type="submit">
+            <b>Cadastrar</b>
+        </button>
+        <br />
+        <br />
+        <a href="tel:12991234567" title="Ir para WhatsApp">Algum problema? Nos contate via WhatsApp!</a><!--Eu deveria colocar o DDD entre parenteses?-->
+    </form>
+    <hr />
+    <blockquote>
+        <i>Se fracassar, ao menos que fracasse ousando grandes feitos, de modo que sua postura nunca seja dessas almas frias e tímidas que não conhecem nem a vitória nem a derrota.</i> Theodore Roosevelt
+    </blockquote>
+    <!-- <br /> -->
+    <footer>
+        &copy; 2024 - Todos os direitos reservados!
+    </footer>
+</body>
+</html>

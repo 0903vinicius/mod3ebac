@@ -1,0 +1,90 @@
+<!--Aula 9 - mód 3:Boas práticas-->
+<!--Aula 10: Glossário-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendas</title>
+</head>
+<body>
+    <!--Aula 9-->
+    <!--Tag  <hr>: 
+    Essa tag também pode receber atributos opcionais para personalizar sua aparência. Alguns atributos comuns incluem: 
+        • size: especifica a altura da linha horizontal. Por exemplo, <hr size="2"> cria uma linha mais alta do que <hr size="1">. 
+        • color: define a cor da linha. Você pode especificar uma cor usando um valor hexadecimal (#RRGGBB) ou um nome de cor pré-definido. Por exemplo, <hr color="#FF0000"> define a linha como vermelha. 
+        • width: define a largura da linha horizontal. Pode ser especificada em pixels (por exemplo, <hr width="200">) ou em porcentagem da largura da janela do navegador (por exemplo, <hr width="50%">).-->
+    <hr />
+    <hr size="1"/>
+    <hr size="2"/>
+    <hr size="30"/>
+    <hr color="#ff0000"/>
+    <hr size="10" color="#ff0000"/>
+    <hr size="10" color="#ff0000" width="200"/>
+    <hr size="10" color="#ff0000" width="50%"/>
+    <!--Vale ressaltar que, embora a tag <hr> seja amplamente suportada pelos navegadores, é importante usar estilos CSS para personalizar a aparência da linha horizontal, em vez de depender exclusivamente dos atributos da tag. Isso permite um controle mais preciso sobre a aparência e o layout da linha.-->
+    <br />
+    <!--Tag  <br>: 
+        O uso excessivo da tag <br> pode prejudicar a semântica e a estrutura correta do seu documento HTML. Para criar espaçamento vertical entre elementos ou parágrafos, é recomendado o uso de estilos CSS, como margens ou preenchimentos, em vez de depender exclusivamente da tag <br>.-->
+    <br />
+    <!--A tag <label>: 
+    Essa tag pode ser usada de duas maneiras principais: 
+        1) Rótulo vinculado a um elemento de formulário Nesse caso, o rótulo é associado a um elemento de formulário específico usando o atributo for e o ID do elemento. Quando o rótulo é clicado, o foco é transferido para o elemento associado. Exemplo: 
+        <label for="nome">Nome:</label> 
+        <input type="text" id="nome" name="nome"> 
+        Nesse exemplo, o rótulo "Nome:" está associado ao campo de entrada de texto por meio do atributo for com o valor "nome". Quando o rótulo é clicado, o campo de entrada de texto recebe o foco.
+        2) Rótulo envolvendo um elemento de formulário: 
+        Nesse caso, o elemento de formulário é incluído diretamente dentro da tag <label>. Isso significa que o rótulo abrange visualmente o elemento de formulário, facilitando a interação. Exemplo: 
+        Selecione uma opção: 
+        <label> 
+            <select name="opcao"> 
+                <option value="opcao1">Opção 1</option> 
+                <option value="opcao2">Opção 2</option> 
+            </select> 
+        </label> 
+        Nesse exemplo, o rótulo "Selecione uma opção:" envolve o elemento <select>, que exibe um menu suspenso com duas opções.-->
+    <label for="nome">Nome:</label> 
+    <input type="text" id="nome" name="nome">
+    <hr />
+    <label> 
+        <select name="opcao"> 
+            <option value="opcao1">Opção 1</option> 
+            <option value="opcao2">Opção 2</option> 
+        </select> 
+    </label>
+    <!--Aula 10-->
+    <!--
+    Estruture páginas 
+        Glossário 
+            Atributo:
+                É uma parte de um elemento HTML que fornece informações adicionais sobre esse elemento. Os atributos são usados para modificar o comportamento ou a aparência dos elementos HTML e são especificados na tag de abertura do elemento. 
+            Charset:
+                É uma tag usada no cabeçalho (head) de um documento HTML para especificar a codificação de caracteres utilizada pelo arquivo. Ela informa ao navegador como interpretar e exibir corretamente os caracteres do conteúdo do documento.
+            Equiv:
+                Diretiva usada dentro da tag <meta> em HTML para fornecer informações adicionais ao navegador ou ao servidor web sobre como processar a página. Essa diretiva é usada no atributo "http-equiv" da tag <meta> para simular o comportamento de um cabeçalho HTTP. Ela permite definir certos parâmetros que normalmente seriam enviados no cabeçalho HTTP em vez de especificá-los no código HTML.
+            Index (Índice):
+                Página inicial que lista ou organiza outros documentos ou conteúdos disponíveis. Ele é considerado o ponto de entrada padrão para um site e é geralmente a primeira página que os usuários veem quando acessam um domínio
+    Insira textos 
+        Glossário 
+            <br> (Line break “Quebra de linha”) 
+                Em HTML, essa tag indica ao navegador que uma quebra de linha deve ser inserida no local onde a tag está posicionada. Isso é útil quando você deseja criar uma linha sem criar um parágrafo ou espaço vertical significativo. Ela é uma tag de autocompletar, o que significa que não possui uma tag de fechamento correspondente. 
+            <hr> (Horizontal rule "regra horizontal”) 
+                Em HTML é usada para criar uma linha horizontal em uma página da web. Geralmente é usada para separar seções ou elementos visuais distintos. É uma tag de autocompletar, o que significa que ela não possui uma tag de fechamento correspondente.
+    Liste em HTML 
+        Glossário 
+            <li> 
+                Em HTML essa tag é usada para definir um item de lista em uma lista ordenada (<ol>) ou uma lista não ordenada (<ul>). Ela representa cada item individual dentro de uma lista. 
+            <ol> (Ordered List “lista ordenada) 
+                Tag usada para criar uma lista na qual a ordem dos itens é importante. Os itens da lista são numerados automaticamente ou marcados com outros tipos de ordem, como letras ou algarismos romanos. Por padrão, os navegadores geralmente exibem os itens de uma <ol> como uma lista numerada. 
+            <ul> (Unordered List “Lista não ordenada) 
+                Essa tag é usada para criar uma lista na qual a ordem dos itens não possui importância significativa. Os itens da lista são geralmente marcados com pontos ou símbolos de marcadores. Por padrão, os navegadores geralmente exibem os itens de uma <ul> como uma lista com marcadores (bullets). 
+    Crie formulários 
+        Glossário 
+            Label 
+                A tag <label> em HTML é usada para associar um rótulo descritivo a um elemento de formulário. O rótulo é utilizado para descrever o propósito ou a função de um campo de formulário específico, fornecendo uma melhor experiência de uso e acessibilidade. 
+            Name 
+                É um atributo em HTML usado para fornecer um nome identificador a um elemento de formulário. Ele é usado principalmente em elementos como <input>, <select>, <textarea> e <button> para associar o valor ou a seleção feita pelo usuário a um nome específico no envio do formulário. O valor do atributo name é usado para identificar o campo no lado do servidor quando o formulário é enviado. O nome é enviado como uma chave junto com o valor do campo correspondente.
+            Placeholder 
+                É um atributo usado em elementos de formulário HTML, como <input> e <textarea>, para fornecer um texto de exemplo ou uma dica sobre o tipo de valor que se espera ser inserido no campo. O texto definido no atributo placeholder é exibido no campo antes que o usuário insira qualquer valor. Geralmente, ele é exibido em uma cor diferente ou em um estilo mais claro para indicar que se trata apenas de um texto de orientação e não um valor real. -->
+</body>
+</html>

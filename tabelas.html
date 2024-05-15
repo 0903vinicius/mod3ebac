@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre tabelas</title>
+</head>
+<body>
+    <table> <!--Aqui vamos criar uma tabela que terão notas de 2 alunos, e no rodapé faremos a média dessas notas-->
+        <caption><h4>Notas dos alunos e sua média!</h4></caption>
+        <thead> <!--Usamos <thead> para fazermos o cabeçalho, pesquisar oq significa ""-->
+            <tr> <!--tr de tableroll, é como fazemos uma linha-->
+                <th><h3>Nome do aluno</h3></th> <!--th é como faremos as colunas-->
+                <th><h3>Nota do aluno</h3></th>
+            </tr>
+        </thead>
+        <tbody> <!--Atenção, para fazermos as colunas dentro do tbody, não usaremos th e sim td-->
+            <tr>
+                <td>Vinicius</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Gabriela</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--Vemos que para fazermos as colunas dentro do tfoot, também usamos td e não th-->
+            <tr>
+                <td><h4>Média das notas:</h4></td>
+                <td>9</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--(11/05/24) Aula 8 - Mód 3 - Ebac-->
+<!--Vamos trabalhar com as mídias, o prof disponibilizou na parte de material de apoio 3 mídias, uma img, um vídeo e uma música, fiz o download e joguei aqui com pegando elas da pasta de download e jogando dentro da pasta desses arquivos aqui-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia</title>
+</head>
+<body>
+    <!--#1# O primeiro tipo de mídia que vamos aprender a trabalhar é a img, para inserir uma na tela usaremos a tag <img> e ela tem o atributo src="" q colocaremos o caminho até a imagem-->
+    <img src="./midias/imagem_module 3.jpg" alt="Uma abelha numa flor amarela"/>
+    <!--#3# Aqui, dps que joguei as mídias no vscode, criei um folder/pasta e joguei as mídias dentro, pra ficar mais organizado-->
+    <!--#4# Uma coisa importante qdo trabalhamos com img é adc um texto alternativo, fazemos isso através do atributo alt, importante para pessoas com deficiência visual e tb pro Google, já que ele não lê imgs-->
+    <!--#2# Uma percepção que eu tive, qdo vamos colocar o caminho/apontamento até alguma coisa, que nem agr, vamos colocar o caminho até a img ent usamos o ./, qdo vamos colocar na página do index o link/conexão até outra página/pasta, usamos <a href="./containers.html">, veja o ./ nesse caso dnv, vou reparar se nos próximos tb serão assim-->
+    <!--#5# Agr vamos ver como adcionaremos um áudio, que diferente da img, tem um fechamento, o pq eu não sei-->
+    <audio controls src="./midias/musica_module 3.mp3"></audio>
+    <!--#6# Usamos o atributo controls para que o áudio apareca na tela do Live Server e o usuário possa controlar, ele não explicou mto bem esse atributo-->
+    <video controls src="./midias/video_module 3.mp4"></video>
+    <!--#7# Ao adicionarmos somente o vídeo o usuário não consegue dar play, pra isso tb usaremos o atributo controls-->
+    <!--#8# Outra dúvida, pq o vídeo tb tem fechamento, só a img que não será que é pq ela é estática? Também não utilizamos o atributo alt que utilizamos na img, será q o prof esqueceu ou realmente não precisa?-->
+    <hr />
+    <!--#9# Também conseguimos trabalhar com mídias/recursos da internet, que não precisam, necessariamente, estar no nosso pc-->
+    <!--#10# Por exemplo, vamos na net, procuramos uma img do Batman no Google imgs, abrimos a img em uma nova guia, copiamos seu link e colocamos no lugar do nosso apontamento, já que vamos apontar para outro local-->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK24Cguchzl_PkHmQRnIbESDW5wfXM8soLRw&s" alt="Batman de Cristian Bale"/>
+    <!--#11# Faltou ele explicar como ajusta o damanho dessa mídias-->
+    <!--#12# Isso de apontar uma mídia da net não é muito seguro, eu suponho, pois e se o dono da mídia excluir o arquivo, aí pederemos nossa mídia e daria um bug, eu ia perguntar isso mas aí passaria dos limites de caracteres-->
+    <!--#13# Fiz 3 perguntas nos comentários: 
+    1 - Qdo usamos a tag <img>, dentro dela colocamos o atributo scr e dps o alt, a dúvida é se não precisaríamos fazer isso na tag <audio> e na tag <video>?
+    2 - Já na tag <audio> e na <video> usamos o atributo controls e na <img> não. A minha dúvida é, usamos controls pois no caso do áudio e do vídeo, precisamos deixar o "controle" de dar play pro usuário já que áudios e vídeos não são "estáticos", e em qual outra situação usaremos o controls, explique melhor!
+    3 - Qdo usamos a tag <img> não "fechamos" ela, já na tag <audio> fechamos com </audio> e no vídeo a msm coisa, pq isso ocorre?-->
+    <hr />
+    <!--Dia 14/05
+    Ao procurar se minhas perguntas tinham sido respondias, percebi que por algum bug ou erro meu, o meu comentário não estava na seção de comentários. Lendo o material de apoio da msm aula, percebi alguns atributos que o prof não tinha ensinado em vídeo, então resolvi testar-->
+    <img src="./midias/imagem_module 3.jpg"/>
+    <audio controls src="./midias/musica_module 3.mp3" autoplay></audio>
+    <!--Com o autoplay, a música, ou vídeo com música, começa a tocar assim q o usuário abre a página, não precisando esperar o download completo da música!-->
+    <audio controls>
+        <source src="./midias/musica_module 3.mp3" type="audio/mpeg"/>
+    </audio>
+    <!--Não entendi muito bem a tag source, ela serve só pra dizer o tipo do arquivo? No caso do áudio, pode ser: audio/mpeg qdo for (.MP3), audio/ogg qdo for (.OGG) e audio/wav qdo for (.WAV). 
+    Detalhe: veja como o código fica diferente nos 2 casos
+    Detalhe2: Qdo eu fui colocar o source nas legendas, ao traduzir seu texto, respondi a pergunta acima, só olhar lá-->
+    <video controls autoplay src="./midias/video_module 3.mp4"></video>
+    <video controls>
+        <source src="./midias/video_module 3.mp4" type="video/mp4"/>
+    </video>
+    <!--Legendas:
+    1 - controls: Se este atributo estiver presente, o navegador oferecerá controles para permitir ao usuário controlar a reprodução de áudio, incluindo volume, busca e pausar/retomar a reprodução.
+    2 - autoplay: Um atributo booleano: se especificado, o áudio começará a ser reproduzido automaticamente assim que possível, sem esperar que o download do arquivo de áudio inteiro termine.
+    Observação: Sites que reproduzem áudio automaticamente (ou vídeos com faixa de áudio) podem ser uma experiência desagradável para os usuários, portanto, devem torná-lo opcional (exigindo que o usuário o habilite especificamente). No entanto, isto pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle de uso.
+    3  - src: O URL do áudio a ser incorporado. Isso está sujeito a controles de acesso HTTP. Isto é opcional; você pode usar o elemento <source> dentro do bloco de áudio para especificar o áudio a ser incorporado.
+    4 - O elemento source permite que os autores especifiquem vários recursos de mídia alternativos para elementos de mídia. Não representa nada por si só.-->
+    <!--Uma coisa que percebi por último e que, talvez, responda uma dúvida anterior, no caso da tag img, usamos o alt pra descrever doq se trata aquela img, já no caso da tag audio e da video, não. Mas em compensação, no caso da tag audio e da video fechamos ela, e no meio desse "fechamento" tem um espaço que podemos usar pra escrever algo, eu escrevi, mas não aparece nada na página web, talvez, para descrevermos doq aquela música ou aquele vídeo se trata, devemos colocar alí dentro, vou mostrar: <video controls autoplay src="./midias/video_module 3.mp4">DESCRIÇÃO AQUI</video>-->
+</body>
+</html>

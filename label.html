@@ -1,0 +1,23 @@
+<!--(11/05/24) - Aula 7 do Módulo 3 da Ebac-->
+<!--Aqui, vamos estar aprendendendo melhor sobre label, for e id e como eles se relacionam e como-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+</head>
+<body>
+    <form>
+        <label for="user">Usuário</label> <!--#3# Vinculamos o id do input com o label através do for-->
+        <input id="user" type="text"/> <!--#2# 1º - Aqui identificamos o input como "user", dps vamos vincular esse id user no label usando o for-->
+        <br />
+        <!--#1# Aqui, temos um novo type, o password ou senha, ela oculta os caracteres digitados -->
+        <!--#4# Assim, vemos que criamos um vinculo, feito pelo id, aí a label tb vai corresponder áquele campo-->
+        <label for="senha">Senha</label>
+        <input id="senha" type="password"/>
+        <!--#5# Id e classe podemos colocar em português-->
+        <!--Assim, ganhamos pontos de acessibilidade no Google-->
+    </form>
+</body>
+</html>

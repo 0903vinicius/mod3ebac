@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!--Ok, vamos recapitular oq aprendemos-->
+<!--Isso é oq está no material de apoio da aula 1-->
+<!--
+    tags = palavras-chave
+        <h1>Olá mundo</h1>
+            abertura de tag - conteudo da tag - fechamento da tag
+    atributos = conteúdo que está junto com a abertura da tag
+    <!DOCTYPE html>
+        Nesta primeira tag informamos ao navegador que tipo de arquivo ele está recebendo.
+    <html lang="pt-br"
+        Aqui estamos abrindo a tag HTML, em lang informamos o idioma que o conteúdo do documento HTML está escrito, esse conteúdo que está junto com a abertura da tag chamamos de atributo.
+    <head>
+        Dentro da tag head iremos inserir informações que serão interpretadas pelo navegador, mas não será exibidas na tela.
+    <meta charset="UTF=8">
+        Inserimos essa tag dentro de <head>, ela tem a função de informar o navegador como ele deve Gian Souza exibir os caracteres.
+    <title>
+        Na tag title inserimos o título da página, é o nome que será exibido na aba do navegador.
+    <body>
+        A tag body é nosso principal container, dentro dele será escrito todo o conteúdo que poderá ser visível para o usuário, como textos, imagens, vídeos, formulários e outros elementos.
+    Metatags
+        As metatags são tags, localizadas dentro da tag <head>, utilizadas para passar alguma informação para a tecnologia que irá consumir o conteúdo, por exemplo: a meta tag <meta charset=“UTF-8” /> informa o navegador (tecnologia) qual é o tipo de caracteres que ele deve exibir.
+        Existem outras tecnologias além do navegador que consegue entender documentos HTML, é o caso dos robôs (crawlers), a ferramenta de busca do Google é um crawler, que sabe ler o HTML de um site e a partir disso categorizar o conteúdo para quando uma pesquisa for feita poder exibir o site no resultado das buscas.
+        Quando copiamos o link de um site e compartilhamos no Facebook, ali também temos um crawler, alias, o título exibido no Facebook pode ser diferente do título atribuído na tag <title>, para isso utilizamos a metatag: 
+        <meta property="og:title“ content=“Título para o Facebook" />
+    Textos
+            Para inserir um texto no HTML podemos simplesmente escreve-lo dentro da tag body, possuímos também algumas tags dedicas à textos no HTML: 
+                <h1>...<h6>: As tags Hs, vão do 1 ao 6, são utilizadas para criar títulos nas páginas, por padrão o navegador aplica um tamanho da fonte maior para a tag <h1>, diminuindo até <h6>
+                <span>: não fornece nenhuma estilização, mas é útil para quando temos que estilizar um pedaço de texto; 
+                <p>: utilizada para construir parágrafos; 
+                <b>: utilizada para aplicar negrito à um texto; 
+                <i>: utilizada para aplicar itálico à um texto;
+                <mark>: utilizada para destacar um texto, como um marca-texto.
+                <a>: utilizada para construir links, informamos para qual endereço o usuário será levado através do atributo href;
+                    Exemplos:
+                        <a href="./google.com" title="Abrir o Google">Ir para o Google</a>
+                            Vamos lá, dentro do href="", usamos o ./ para direcionarmos para o link que queremos o title serve pra qdo a pessoa por o mouse em cima, aparecer uma caixinha de texto em branco reforçando a função do link, e o texto no meio da tag e seu fechamento é o texto que aparece na página web
+                        <a href="tel:123456789" title="Ir para WhatsApp">Algum problema? Nos contate via WhatsApp!</a>
+                        <a href="mailto:teste1@gmail.com" title="Nosso e-mail">Entre em contato pelo e-mail!</a>
+                <em>: utilizada para enfatizar um texto, também aplica o itálico;
+                <strong>: utilizada para informar que um texto é importante, também aplica o negrito;
+                <del>: utilizada para informar que um texto foi deletado, aplica o tachado no texto; 
+                <small>: utilizada para criar um texto com fonte menor; 
+                <blockquote>: utilizada para inserir uma citação, aplica um margem no conteúdo;
+                <address>: utilizada para inserir um endereço, também aplica o itálico;
+    Containers
+        No HTML possuímos algumas tags que tem a função de conter outras tags, como se fossem caixas, antes do HTML5 o único container que tínhamos era a tag <div>, funciona bem, porém tínhamos um problema de semântica, não tinha como distinguir o cabeçalho de um site com o rodapé, a não ser de maneira visual.
+        Com o HTML5 tivemos a adição das tags: 
+            <header>: utilizada para criar um cabeçalho; 
+            <footer>: utilizada para criar um rodapé; 
+            <main>: utilizada para conter o conteúdo principal da página; 
+            <aside>: utilizada para construir barras laterais; 
+            <section>: utilizada para dividir o conteúdo em seções;
+            <article>: utilizada para criar artigos, posts; 
+            <nav>: utilizada para criar menus de navegação.
+    Listas
+        No HTML possuímos dois tipos de lista: ordenada e não ordenada. 
+            As listas ordenadas seguem um sequência numérica em seus itens, por exemplo: 
+                1. HTML 
+                2. CSS 
+                3. JavaScript
+                    Para construir uma lista ordenada escrevemos: 
+                        <ol> 
+                            <li>HTML</li> 
+                            <li>CSS</li> 
+                            <li>JavaScript</li> 
+                        </ol>
+            Já uma lista não ordenada, não precisa seguir uma ordem e por isso não possuem um número antes do conteúdo: 
+                • HTML 
+                • CSS 
+                • JavaScript
+                    Para construir uma lista não ordenada escrevemos: 
+                        <ul> 
+                            <li>HTML</li> 
+                            <li>CSS</li> 
+                            <li>JavaScript</li> 
+                        </ul>
+    Tabelas
+        Para construir uma tabela utilizamos as tags: 
+            <table>: é o container da tabela; 
+            <thead>: utilizada para construir o cabeçalho da tabela; 
+            <tbody>: utilizada para construir o corpo, conteúdo, da tabela; 
+            <tfoot>: utilizada para construir o rodapé da tabela.
+            <tr>: utilizada para construir uma linha na tabela; 
+            <td>: utilizada para construir uma coluna na tabela; 
+            <th>: utilizada para construir uma coluna no cabeçalho da tabela; 
+            <caption>: utilizada para inserir uma legenda para a tabela;
+                Exemplo:
+                    <table> 
+                        <caption>Smarphones mais vendidos no ano</caption> 
+                        <thead> 
+                            <th>Smartphone</th> 
+                            <th>Marca</th> 
+                            <th>Vendas</th> 
+                        </thead>
+                        <tbody> 
+                            <tr> 
+                                <td>Galaxy S21</td> 
+                                <td>Samsung</td> 
+                                <td>1.005.000</td> 
+                            </tr> 
+                            <tr> 
+                                <td>iPhone 13</td> 
+                                <td>Apple</td> 
+                                <td>970.000</td> 
+                            </tr> 
+                        </tbody>
+                        <tfoot> 
+                            <tr> 
+                                <td colspan=“2”>Total de vendas</td> 
+                                <td>1.975.000</td> 
+                            </tr> 
+                        </tfoot> 
+                    </table>
+                Aqui na tag <td> utilizamos o atributo colspan para fazer com que a coluna ocupasse o espaço de duas colunas para que o layout da tabela não fosse desalinhado.
+    Formulários
+        Para construir um formulário com o HTML possuímos as tags: 
+            <form>: container do formulário, todos os campos e botões deverão estar dentro desta tag; 
+            <input>: para inserir um campo; 
+            <select>: para criar uma lista de opções, uma caixa de seleção; 
+            <button>: para inserir botões;
+        Tipos de campos:
+            Na tag <input> possuímos um atributo chamado type, este atributo pode receber os valores: 
+                • text: para campos de texto; 
+                • email: para campos que receberão um e-mail; 
+                • tel: para campos que irão receber um número de telefone; 
+                • file: para campos que serão utilizados para anexar um arquivo;
+                • color: para campos que receberão uma cor; 
+                • checkbox: para criar caixas de marcação; 
+                • radio: para criar campos de opção.
+        Validações:
+            Podemos informar ao navegador que um campo é obrigatório utilizando o atributo required=“true”, ou apenas adicionamento o atributo required. Além disso quando utilizamos o type correto para o input, o próprio navegador aplica uma validação, caso digitemos um valor incorreto para um campo de e-mail, o navegador irá retornar uma mensagem alertando.
+    Aqui, vamos estar aprendendendo melhor sobre label, for e id e como eles se relacionam e como e também sobre password-->
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Label</title>
+            </head>
+            <body>
+                <form>
+                    <label for="user">Usuário</label> <!--#3# Vinculamos o id do input com o label através do for-->
+                    <input id="user" type="text"/> <!--#2# 1º - Aqui identificamos o input como "user", dps vamos vincular esse id user no label usando o for-->
+                    <br />
+                    <!--#1# Aqui, temos um novo type, o password ou senha, ela oculta os caracteres digitados -->
+                    <!--#4# Assim, vemos que criamos um vinculo, feito pelo id, aí a label tb vai corresponder áquele campo-->
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password"/>
+                    <!--#5# Id e classe podemos colocar em português-->
+                    <!--Assim, ganhamos pontos de acessibilidade no Google-->
+                </form>
+            </body>
+            </html>
+<!--
+    Multimidia
+        Podemos trabalhar com elementos multimidia no HTML, possuímos imagens, vídeos e áudio. 
+            <img>: utilizada para inserir uma imagem na página;
+            <audio>: utilizada para inserir um áudio na página; 
+            <video>: utilizada para inserir um vídeo na página;
+        Áudio e vídeo
+            As tags audio e video possui uma configuração semelhante, para adicionar um vídeo ou imagem seguimos a estrutura:
+            <audio controls> 
+                <source src=“arquivo.mp3” type=“audio/mpeg” /> 
+            </audio> 
+            <video controls autoplay> 
+                <source src=“video.mp4” type=“video/mp4” /> 
+            </video>
+            Com o atributo controls habilitamos os botões para controlar a mídia, como volume, play, pause, avançar e retroceder. Com o atributo autoplay o arquivo será executado assim que for carregado, sem que o usuário tenha eu executar alguma ação.
+            No atributo type da tag source informamos o media type do arquivo, são eles: 
+                Para áudio: audio/mpeg (.MP3), audio/ogg (.OGG) e audio/wav (.WAV); 
+                Para vídeo: video/mp4 (.MP4), video/webm (.WebM) e video/ogg (OGG)
+        Imagens
+            Para inserir uma imagem utilizamos a tag img, utilizamos o atributo src para informar o caminho da imagem e o atributo alt para informar um texto que será exibido caso a imagem não carregue, esse texto também será utilizado por leitores de tela, portanto é importante descrever a imagem por motivos de acessibilidade. 
+            Exemplo: 
+                <img src=“fotos/ferias.png” alt=“Foto das minhas na praia, pessoas jogando futebol na areia” /> 
+                Assim caso a página seja acessada por um leitor de tela ele irá narrar o conteúdo descrito no Gian Souza atributo alt, tornando o conteúdo acessível para pessoas com deficiência visual.
+-->
+<!--Agreguei a aula 9 e 10 aqui junto!-->
+<!--Aula 9 - mód 3:Boas práticas-->
+<!--Aula 10: Glossário-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendas</title>
+</head>
+<body>
+    <!--Aula 9-->
+    <!--Tag  <hr>: 
+    Essa tag também pode receber atributos opcionais para personalizar sua aparência. Alguns atributos comuns incluem: 
+        • size: especifica a altura da linha horizontal. Por exemplo, <hr size="2"> cria uma linha mais alta do que <hr size="1">. 
+        • color: define a cor da linha. Você pode especificar uma cor usando um valor hexadecimal (#RRGGBB) ou um nome de cor pré-definido. Por exemplo, <hr color="#FF0000"> define a linha como vermelha. 
+        • width: define a largura da linha horizontal. Pode ser especificada em pixels (por exemplo, <hr width="200">) ou em porcentagem da largura da janela do navegador (por exemplo, <hr width="50%">).-->
+    <hr />
+    <hr size="1"/>
+    <hr size="2"/>
+    <hr size="30"/>
+    <hr color="#ff0000"/>
+    <hr size="10" color="#ff0000"/>
+    <hr size="10" color="#ff0000" width="200"/>
+    <hr size="10" color="#ff0000" width="50%"/>
+    <!--Vale ressaltar que, embora a tag <hr> seja amplamente suportada pelos navegadores, é importante usar estilos CSS para personalizar a aparência da linha horizontal, em vez de depender exclusivamente dos atributos da tag. Isso permite um controle mais preciso sobre a aparência e o layout da linha.-->
+    <br />
+    <!--Tag  <br>: 
+        O uso excessivo da tag <br> pode prejudicar a semântica e a estrutura correta do seu documento HTML. Para criar espaçamento vertical entre elementos ou parágrafos, é recomendado o uso de estilos CSS, como margens ou preenchimentos, em vez de depender exclusivamente da tag <br>.-->
+    <br />
+    <!--A tag <label>: 
+    Essa tag pode ser usada de duas maneiras principais: 
+        1) Rótulo vinculado a um elemento de formulário Nesse caso, o rótulo é associado a um elemento de formulário específico usando o atributo for e o ID do elemento. Quando o rótulo é clicado, o foco é transferido para o elemento associado. Exemplo: 
+        <label for="nome">Nome:</label> 
+        <input type="text" id="nome" name="nome"> 
+        Nesse exemplo, o rótulo "Nome:" está associado ao campo de entrada de texto por meio do atributo for com o valor "nome". Quando o rótulo é clicado, o campo de entrada de texto recebe o foco.
+        2) Rótulo envolvendo um elemento de formulário: 
+        Nesse caso, o elemento de formulário é incluído diretamente dentro da tag <label>. Isso significa que o rótulo abrange visualmente o elemento de formulário, facilitando a interação. Exemplo: 
+        Selecione uma opção: 
+        <label> 
+            <select name="opcao"> 
+                <option value="opcao1">Opção 1</option> 
+                <option value="opcao2">Opção 2</option> 
+            </select> 
+        </label> 
+        Nesse exemplo, o rótulo "Selecione uma opção:" envolve o elemento <select>, que exibe um menu suspenso com duas opções.-->
+    <label for="nome">Nome:</label> 
+    <input type="text" id="nome" name="nome">
+    <hr />
+    <label> 
+        <select name="opcao"> 
+            <option value="opcao1">Opção 1</option> 
+            <option value="opcao2">Opção 2</option> 
+        </select> 
+    </label>
+    <!--Aula 10-->
+    <!--
+    Estruture páginas 
+        Glossário 
+            Atributo:
+                É uma parte de um elemento HTML que fornece informações adicionais sobre esse elemento. Os atributos são usados para modificar o comportamento ou a aparência dos elementos HTML e são especificados na tag de abertura do elemento. 
+            Charset:
+                É uma tag usada no cabeçalho (head) de um documento HTML para especificar a codificação de caracteres utilizada pelo arquivo. Ela informa ao navegador como interpretar e exibir corretamente os caracteres do conteúdo do documento.
+            Equiv:
+                Diretiva usada dentro da tag <meta> em HTML para fornecer informações adicionais ao navegador ou ao servidor web sobre como processar a página. Essa diretiva é usada no atributo "http-equiv" da tag <meta> para simular o comportamento de um cabeçalho HTTP. Ela permite definir certos parâmetros que normalmente seriam enviados no cabeçalho HTTP em vez de especificá-los no código HTML.
+            Index (Índice):
+                Página inicial que lista ou organiza outros documentos ou conteúdos disponíveis. Ele é considerado o ponto de entrada padrão para um site e é geralmente a primeira página que os usuários veem quando acessam um domínio
+    Insira textos 
+        Glossário 
+            <br> (Line break “Quebra de linha”) 
+                Em HTML, essa tag indica ao navegador que uma quebra de linha deve ser inserida no local onde a tag está posicionada. Isso é útil quando você deseja criar uma linha sem criar um parágrafo ou espaço vertical significativo. Ela é uma tag de autocompletar, o que significa que não possui uma tag de fechamento correspondente. 
+            <hr> (Horizontal rule "regra horizontal”) 
+                Em HTML é usada para criar uma linha horizontal em uma página da web. Geralmente é usada para separar seções ou elementos visuais distintos. É uma tag de autocompletar, o que significa que ela não possui uma tag de fechamento correspondente.
+    Liste em HTML 
+        Glossário 
+            <li> 
+                Em HTML essa tag é usada para definir um item de lista em uma lista ordenada (<ol>) ou uma lista não ordenada (<ul>). Ela representa cada item individual dentro de uma lista. 
+            <ol> (Ordered List “lista ordenada) 
+                Tag usada para criar uma lista na qual a ordem dos itens é importante. Os itens da lista são numerados automaticamente ou marcados com outros tipos de ordem, como letras ou algarismos romanos. Por padrão, os navegadores geralmente exibem os itens de uma <ol> como uma lista numerada. 
+            <ul> (Unordered List “Lista não ordenada) 
+                Essa tag é usada para criar uma lista na qual a ordem dos itens não possui importância significativa. Os itens da lista são geralmente marcados com pontos ou símbolos de marcadores. Por padrão, os navegadores geralmente exibem os itens de uma <ul> como uma lista com marcadores (bullets). 
+    Crie formulários 
+        Glossário 
+            Label 
+                A tag <label> em HTML é usada para associar um rótulo descritivo a um elemento de formulário. O rótulo é utilizado para descrever o propósito ou a função de um campo de formulário específico, fornecendo uma melhor experiência de uso e acessibilidade. 
+            Name 
+                É um atributo em HTML usado para fornecer um nome identificador a um elemento de formulário. Ele é usado principalmente em elementos como <input>, <select>, <textarea> e <button> para associar o valor ou a seleção feita pelo usuário a um nome específico no envio do formulário. O valor do atributo name é usado para identificar o campo no lado do servidor quando o formulário é enviado. O nome é enviado como uma chave junto com o valor do campo correspondente.
+            Placeholder 
+                É um atributo usado em elementos de formulário HTML, como <input> e <textarea>, para fornecer um texto de exemplo ou uma dica sobre o tipo de valor que se espera ser inserido no campo. O texto definido no atributo placeholder é exibido no campo antes que o usuário insira qualquer valor. Geralmente, ele é exibido em uma cor diferente ou em um estilo mais claro para indicar que se trata apenas de um texto de orientação e não um valor real. 
+    Para colocarmos esse "©" de direitos reservados, usamos o &copy;-->
+</body>
+</html>

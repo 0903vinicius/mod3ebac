@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <!--Principal tag pra trabalhar com formulários vai ser a <forms>, aí dentro, teremos os campos dos formulários-->
+    <!--Vamos estar utilizando a tag <imput />, repare que ela é uma tag simples, ela abre e fecha na msm linha -->
+    <!--Ela tem uma variação interessante com o atributo type <input type=""> apertamos ctrl+space que vai abrir várias opções de tipos de campos, nessa aula, estaremos vendo as principais" />-->
+    <form>
+        <input type="text" placeholder="Seu Nome"/> 
+        <!--Aqui vemos que o atributo type abre um campo de texto, onde o usuário pode digitar alguma coisa-->
+        <!--Para indicar ao usuário oq esperamos que ele escreva dentro dessa caixa de texto, usaremos o placeholder, placeholder se traduz como "Espaço reservado"-->
+        <br />
+        <!--Existe uma outra forma de mostrarmos ao usuário q tipo de informação esperamos que ele coloque naquele campo, que é usando a tag <label> que significa "Rótulo"-->
+        <label>Seu e-mail</label>
+        <input type="email" />
+        <!--Existe uma forma de selecionar/dar destaque, com a tag label, ao campo quando clicamos em "Seu email" no Live server, pra isso usaremos o atributo for="id do campo, que nesse caso é email, " id do campo é oq está no "type". Após isso, adicionaremos no campo de email um id, para isso utilizaremos a propriedade id="email" -->
+        <!--Um detalhe importante que percebi masnão tenho ctz se tem haver, um atributo é algo que sempre usamos dentro de uma tag-->
+        <br />
+        <label for="email">Seu email</label>
+        <input id="email" type="email" />
+        <br />
+        <input type="tel" placeholder="Seu telefone" />
+        <!--Aqui no pc não vemos nada de diferente, mas caso essa página estivesse sendo acessada de um celular, apareceria somente o teclado numérico do msm-->
+        <br />
+        <input type="number" />
+        <!--Aqui sim temos uma situação diferente, vemos q do levamos o mouse no campo, aparece 2 setinhas, pra acrescentar e decrementar, conseguimos delimitar esses calores, tento pro máximo qto pro mínimo-->
+        <br />
+        <input type="number" max="10" min="2" placeholder="Escolha um número" />
+        <!--Ok, aqui pra testar, experimentei colocar o placeholder, mas como a caixinha tinha ficado pequena, o texto não apareceu todo, ainda não sei como arrumar isso, talvez esse fosse o caso que seria melhor usarmos label ao invés de placeholder -->
+        <!--Também conseguimos alterar de qto em qto o usuário poderá mudar o número, de 2 em 2, por exemplo, pra isso usaremos a propriedade step="" -->
+        <br />
+        <input type="number" max="10" min="0" step="2" />
+        <br />
+        <!--Também temos um tipo de campo pra anexar arquivos que é o file-->
+        <input type="file" />
+        <br />
+        <!--Outro tipo interessante de campo é o color, que vai disponibilizar uma caixinha de cores para o usuário selecionar-->
+        <input type="color" />
+        <br />
+        <!--Também termos o checkbox, mas e o texto, adicionaremos isso através do label, só que dessa vez, colocaremos o label dps do checkbox né, pra fazer mais sentido-->
+        <input type="checkbox" id="checkbox" /> <label for="checkbox">Você gosta de filmes?</label>
+        <!--Adicionamos o for no label e o id no type, pra qdo o usuário clicar no texto, a caixinha marcar-->
+        <br />
+        <!--Vamos ver agr aqueles campos que usaremos caso fossemos fazer uma pesquisa e perguntas-->
+        <hr />
+        <p>
+            Qual sua cor preferida?
+        </p>
+        <input type="radio" id="cor-azul"/> <label for="cor-azul">Azul</label>
+        <input type="radio" id="cor-vermelha"/> <label for="cor-vermelha">Vermelho</label>
+        <input type="radio" id="cor-amarela"/> <label for="cor-amarela">Amarelo</label>
+        <!--Ok, aqui percebo que não sei mto bem como usar o for do label e o id do type-->
+        <!--Além de que, aqui temos nosso primeiro bug, pq podemos selecionar todas as caixinhas ao msm tempo, isso pq não informamos ao HTML que essas alternativas fazem parte da msm pergunta, e para arrumarmos isso, usaremos o atributo name=""-->
+        <!--Também, percebi que ao marcarmos uma opção, não conseguimos mais desmarca-lá, e o prof n explica o pq-->
+        <br />
+        <p>
+            Qual sua marca de carros preferida?
+        </p>
+        <input type="radio" name="carro-favorito" id="ferrai"/> <label for="ferrari">Ferrai</label>
+        <input type="radio" name="carro-favorito" id="mc-larem"/> <label for="mc-larem">McLaren</label>
+        <input type="radio" name="carro-favorito" id="porsche"/> <label for="porsche">Porsche</label>
+        <hr />
+        <br />
+        <!--Aqui demos uma caixa de opções ao usuário, aqui o prof foi mais direto, pq não usamos a tag input dessa vez, e ele não explicou o pq-->
+        <label>Qual seu filme favorito?</label>
+        <br />
+        <select>
+            <option>Filme A</option>
+            <option>Filme B</option>
+            <option>Filme C</option>
+        </select>
+        <br />
+        <!--Existe uma opção do select q ele permite escolher mais de uma opção da caixinha, para isso usaremos o atributo multiple e ao selecionarmos a 2ª opção, estivermos segurando a tecla ctrl -->
+        <label>Qual seu filme favorito?</label>
+        <br />
+        <select multiple>
+            <option>Filme A</option>
+            <option>Filme B</option>
+            <option>Filme C</option>
+        </select>
+        <br />
+        <hr />
+        <!--Outra tag é a textarea, que é uma caixa de texto-->
+        <textarea>Digite aqui sua msg</textarea>
+        <!--Aqui como vemos no live server, a msg que posso escrever não é a msm do atributo placeholder, a do placeholder, qdo selecionamos a caixinha, ela some, já a msg que o textarea nos deixa escrever é uma que tem q ser apagada-->
+        <!--Para isso vou tentar usar a tag label, pois o placeholder é um atributo e não sei se ele funciona, vou testar-->
+        <br />
+        <label>Digite aqui seu feedback</label>
+        <br />
+        <textarea></textarea>
+        <br />
+        <label>Digite aqui sua sugestão</label>
+        <br />
+        <textarea placeholder="Digite aqui sua sugestão"></textarea>
+        <!--Funcionou, porém ela não some qdo selecionada e aparece o tracinho de digitação e sim qdo vc escreve algo-->
+        <!--Vou tentar uma gambiarra com o for no label e o id no textarea-->
+        <!--<br />
+        <label for="texto">Digite aqui seu texto</label>
+        <br />
+        <textarea id="texto" placeholder="Digite aqui seu texto" id="texto"></textarea>-->
+        <!--Realmente, não consegui, sad-->
+        <br />
+        <!--Por último, a tag <button>, que serve pra vc criar botões-->
+        <label>Escreva sobre sua profissão</label>
+        <br />
+        <textarea></textarea>
+        <br />
+        <button>
+            Enviar
+        </button>
+        <button>
+            Limpar
+        </button>
+        <!--Agr temos que adc um atributo a tag button pra dizer qual é o tipo do botão-->
+        <hr />
+        <label>Escreva sobre sua profissão</label>
+        <br />
+        <textarea></textarea>
+        <br />
+        <button type="submit">
+            Enviar
+        </button>
+        <button type="reset">
+            Limpar
+        </button>
+        <!--Um detalhe, esse botão enviar e limpar funciona pra todas as opções desse nosso formulário, e não só pra última função como eu estava pensando-->
+    </form>
+</body>
+</html>
